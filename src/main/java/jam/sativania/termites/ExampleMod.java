@@ -1,4 +1,4 @@
-package com.example.examplemod;
+package jam.sativania.termites;
 
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
