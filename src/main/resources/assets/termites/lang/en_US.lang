@@ -1,0 +1,44 @@
+#Termites base lang file
+
+
+
+#Creative Tab(s)
+itemGroup.tab_termites=Termites
+
+
+
+#Items
+
+item.pulp_wood.name=Wood Pulp
+item.potion_ar.name=Ayahuascaline
+item.loam_frame.name=Loam Frame
+item.template_item.name=WIP Testitem
+
+#Blocks
+tile.loam.name=Loam
+tile.dirt_dried.name=Baked Dirt
+tile.template.name=WIP Testblock
+
+
+
+#RANDOM
+block.book_display.name=Book Display
+
+# LAIR
+block.lair_core.name=
+block.lair_queen.name=
+block.lair_connection.name=
+block.lair_intersection.name=
+block.lair_info.name=
+block.lair_housing.name=
+#block.lair_housing2.name=
+block.lair_forester.name=
+block.lair_farmer.name=
+block.lair_recycler.name=
+block.lair_temple.name=
+block.lair_tavern.name=
+block.lair_wineyard.name=
+block.lair_barracks.name=
+block.lair_library.name
+block.lair_provider.name=
+block.lair_architect.name=
