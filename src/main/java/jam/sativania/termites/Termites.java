@@ -41,8 +41,10 @@ public class Termites
 
         tabTermites = new CreativeTabTermites(CreativeTabs.getNextID(), "tab_termites");
 
-        ModItems.itemregister();
-        ModBlocks.inpreInit();
+        ModItems.itemInit();
+        ModItems.itemRegister();
+        ModBlocks.blockInit();
+        ModBlocks.blockRegister();
 
         proxy.preInit(event);
         System.out.println("Termites are arriving! ");                                                                  //+Blocks.DIRT.getUnlocalizedName());

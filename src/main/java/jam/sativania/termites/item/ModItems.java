@@ -1,12 +1,11 @@
 package jam.sativania.termites.item;
 
 import jam.sativania.termites.Termites;
-import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
 import net.minecraft.item.Item;
-import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraft.client.Minecraft;
+
 
 
 /**
@@ -17,60 +16,51 @@ public class ModItems {
 
     public static Item templateitem;   //variables for every item -> simple list, must follow this along file
     public static Item potion;
-    public static Item frame;
+    public static Item loamframe;
     public static Item woodpulp;
 
 
-    public static void itemregister() {
-        inpreInit(templateitem, "template_item");
-        inpreInit(potion, "potion");
-        inpreInit(frame, "frame");
-        inpreInit(woodpulp, "wood_pulp");
-
-
+    public static void itemInit() {
+       loamframe = new ItemLoamFrame("loam_frame", "loam_frame");
+       potion = new ItemPotion("potion", "potion");
+       templateitem = new ItemTemplateItem("template_item", "template_item");
+       woodpulp = new ItemWoodPulp("wood_pulp", "wood_pulp");
 
     }
 
 
-    public static void inpreInit(Item item, String name) {              //method needs to be called in preInit
-
-        item = new Item().setUnlocalizedName(name).setCreativeTab(Termites.tabTermites);
-
-
-
-
-
-        //inside
-        //vorher:
-        //templateitem = new Item().setUnlocalizedName("template_item").setCreativeTab(Termites.tabTermites);
-        //potion = new Item().setUnlocalizedName("potion").setCreativeTab(Termites.tabTermites);
-        //frame = new Item().setUnlocalizedName("frame").setCreativeTab(Termites.tabTermites);
-        //woodpulp = new Item().setUnlocalizedName("pulp_wood").setCreativeTab(Termites.tabTermites);
-
-
-        registerItems(item, name);    //called from below definition GameReg.
-
+    public static void itemRegister() {
+        GameRegistry.register(loamframe);
+        GameRegistry.register(potion);
+        GameRegistry.register(templateitem);
+        GameRegistry.register(woodpulp);
     }
 
-    public static void registerItems(Item item, String name)  {
-        GameRegistry.register(item, new ResourceLocation(Termites.MODID, name));
-    }
+
+
 
     public static void registerRenders() {
-        //registerRender(templateitem);
-        //registerRender(potion);
-        //registerRender(frame);
-        //registerRender(woodpulp);
+        registerRender(loamframe);
+        registerRender(potion);
+        registerRender(templateitem);
+        registerRender(woodpulp);
+
     }
 
     public static void registerRender(Item item) {
+        ModelLoader.setCustomModelResourceLocation(
+                item, 0, new ModelResourceLocation(
+                        Termites.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"
+                )
+        );
 
-       Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Termites.MODID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
+
+
+
+
     }
-
-
-
 }
+
 
 
 

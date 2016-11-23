@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "all": "termites:items/frame"
+    "layer0": "termites:items/loam_frame"
   }
 }

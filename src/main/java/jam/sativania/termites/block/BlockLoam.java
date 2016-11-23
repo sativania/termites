@@ -13,6 +13,7 @@ public class BlockLoam extends Block{
     public BlockLoam(Material materialIn, String name) {
         super(materialIn);
         this.setUnlocalizedName(name);
+        this.setRegistryName(name);
         this.setCreativeTab(Termites.tabTermites);
         this.setHardness(10F); //time to break 10 is high   Obsid 50
         this.setResistance(10F);  //stone is 10 , expl.resistance   Obsid 2000

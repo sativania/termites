@@ -9,8 +9,8 @@ itemGroup.tab_termites=Termites
 
 #Items
 
-item.pulp_wood.name=Wood Pulp
-item.potion_ar.name=Ayahuascaline
+item.wood_pulp.name=Wood Pulp
+item.potion.name=Ayahuascaline
 item.loam_frame.name=Loam Frame
 item.template_item.name=WIP Testitem
 

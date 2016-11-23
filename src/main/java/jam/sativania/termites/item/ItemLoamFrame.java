@@ -7,8 +7,8 @@ import net.minecraft.util.ResourceLocation;
 /**
  * Created by Q on 23.11.2016.
  */
-public class ItemWoodPulp extends Item{
-    public ItemWoodPulp(String unlocalized_name, String registry_name) {
+public class ItemLoamFrame extends Item{
+    public ItemLoamFrame(String unlocalized_name, String registry_name) {
         this.setUnlocalizedName(unlocalized_name);
         this.setRegistryName(new ResourceLocation(Termites.MODID, registry_name));
         this.setCreativeTab(Termites.tabTermites);
